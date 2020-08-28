@@ -11,7 +11,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        cart = docker.build("rafraf1111/cart")
+        docker.build("rafraf1111/cart")
     }
 
     stage('Test image') {
