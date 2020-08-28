@@ -28,6 +28,4 @@ node {
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
             cart.push("${env.BUILD_NUMBER}")
             cart.push("latest")
-            } 
-                echo "Trying to Push Docker Build to DockerHub"
-    }
+    } 
