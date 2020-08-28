@@ -1,4 +1,5 @@
 node {
+    
     def cart
 
     stage('Clone repository') {
