@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        cart = docker.build("rafraf1111/cart")
+        cart = docker.build("rafraf1111/cart:${env.BUILD_NUMBER}")
     }
 
     stage('Test image') {
@@ -26,7 +26,6 @@ node {
         */
         docker.withRegistry('https://registry.hub.docker.com', 'docker_hub') {
             cart.push("${env.BUILD_NUMBER}")
-            cart.push("latest")
             } 
                 echo "Trying to Push Docker Build to DockerHub"
     stage('remove image') {
