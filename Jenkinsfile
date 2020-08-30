@@ -1,7 +1,7 @@
 node {
     def cart
 
-    stage('Clone repositorys') {
+    stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
 
         git 'https://github.com/rafraf1987/cart'
